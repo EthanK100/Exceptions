@@ -14,15 +14,15 @@ int main()
 {
 	try
 	{ 
-		cout << character('a', 1);
+		cout << "New letter: " << character('z', -2) << endl << endl;
 	}
-	catch(char A)
+	catch(char)
 	{
-	
+		cout << "Error: invalid starting value" << endl << endl;
 	}
-	catch (char Z)
+	catch (int)
 	{
-		
+		cout << "Error: target out of range" << endl << endl;
 	}
 
 	
@@ -36,16 +36,15 @@ char character(char start, int offset)
 
 	if (isupper(start) || !isalpha(start))
 	{
-		char A = 'A';
-		throw A;
+		throw 'A';
 	}
 
 	char newCharacter = start + offset;
 
 	if (!isalpha(newCharacter))
 	{
-		char Z = 'Z';
-		throw Z;
+		
+		throw 1;
 	}
 
 	return newCharacter;
