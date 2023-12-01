@@ -22,7 +22,7 @@ int main()
 	}
 	catch (char Z)
 	{
-
+		
 	}
 
 	
@@ -32,7 +32,21 @@ int main()
 // function definitions
 char character(char start, int offset)
 {
+	
+
+	if (isupper(start) || !isalpha(start))
+	{
+		char A = 'A';
+		throw A;
+	}
+
 	char newCharacter = start + offset;
+
+	if (!isalpha(newCharacter))
+	{
+		char Z = 'Z';
+		throw Z;
+	}
 
 	return newCharacter;
 }
