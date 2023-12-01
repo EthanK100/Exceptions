@@ -6,10 +6,33 @@
 
 using namespace std;
 
+// function prototypes
+char character(char start, int offset);
+
+
 int main()
 {
+	try
+	{ 
+		cout << character('a', 1);
+	}
+	catch(char A)
+	{
+	
+	}
+	catch (char Z)
+	{
 
+	}
 
+	
+    return 0;
+}
 
-	return 0;
+// function definitions
+char character(char start, int offset)
+{
+	char newCharacter = start + offset;
+
+	return newCharacter;
 }
